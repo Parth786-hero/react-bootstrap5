@@ -1,13 +1,156 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+--my-color-green{
+    color : #161616;
+}
+#root{
+    display: flex;
+    flex-direction: column;
+    min-height : 100vh;
+}
+a{
+    text-decoration: none;
+    text-transform: capitalize;
+    color : white;
+}
+.bg-white{
+    background-color: white;
+}
+.blue{
+    color : #16a085;
+}
+.bg-blue{
+    background-color: #16a085;
+}
+.small-heading{
+    font-size: .8rem;
+    letter-spacing: .012em;
+}
+.my-navbar{
+    /* border : 2px solid red; */
+    /* position: fixed; */
+    position: sticky;
+    top : 0;
+    width : 100%;
+    background-color: white;
+    z-index: 10;
+}
+.nav-item{
+    color : #16a085;
+}
+.navbar-toggler{
+    border : 4px solid #16a085;
+    transition: all .2s ease-in-out;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.navbar-toggler:focus{
+    
+    box-shadow: 0px 0px 12px var(--my-color-green);
+    border: 6px solid #16a085;
+
+}
+.main-heading{
+    /* border : 2px solid red; */
+    min-height : 75vh;
+}
+#heading-image{
+    height : 22rem;
+    animation-name: animate;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    /* transform: rotate(102deg); */
+
+}
+@keyframes animate{
+    0%{
+        transform: translateY(5px);
+    }
+    100%{
+        transform: translateY(-5px);
+    }
+}
+.check{
+    /* border : 2px solid red; */
+}
+.small-desc{
+    line-height : 2rem;
+    letter-spacing: .015em;
+}
+.btn-primary-custom{
+    border : none;
+    outline : none;
+    padding: .6em 2em;
+    /* background-color: #16a085; */
+}
+.btn-primary-custom:hover{
+    /* border: 2px solid #16a085; */
+    /* background-color : #16a084d8 !important; */
+    background-color: transparent;
+    color : black !important;
+    border: 2px solid #16a085;
+}
+
+.service-section{
+    /* border : 2px solid red; */
+    min-height : 80vh;
+    margin: 1rem 0 0rem;
+    background-color: rgba(128, 128, 128, 0.056);
+}
+.btn-outline{
+    border: 2px solid #16a085;
+}
+.btn-outline:hover{
+    background-color: #16a085;
+    color : white;
+}
+.card{
+    /* border : 2px solid red; */
+    border: none;
+    outline: none;
+    /* width :45rem; */
+    height : 25rem;
+    position: relative;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.17);
+    padding: .5em;
+}
+.card a{
+    position: relative;
+    top : .7rem;
+}
+.card img{
+    
+    height : 12rem;
+    /* width : 100%; */
+    object-fit: cover;
+    object-position: center;
+    /* object-fit: contain; */
+}
+
+form label{
+    text-transform: capitalize;
+}
+form input{
+    padding: .7em 1em !important;
+}
+.footer{
+    margin-top : auto;
+    /* height : 5rem; */
+    /* border : 2px solid red; */
+}
+.footer p{
+    /* border: 2px solid red;; */
+}
+
+@media (max-width : 500px){
+    #heading-image{
+        height : 20rem;
+    }
 }
